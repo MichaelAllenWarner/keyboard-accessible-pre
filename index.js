@@ -16,8 +16,10 @@ if (window.ResizeObserver) {
 
       if (scrollWidth > clientWidth || scrollHeight > clientHeight) {
         target.tabIndex = '0';
+        target.setAttribute('role', 'region');
+        target.setAttribute('aria-label', 'Preformatted text that overflows visually');
       } else {
-        target.removeAttribute('tabindex');
+        ['tabindex', 'role', 'aria-label'].forEach(attr => target.removeAttribute(attr));
       }
     });
   };
