@@ -16,7 +16,7 @@ if (window.ResizeObserver) {
 
       if (scrollWidth > clientWidth || scrollHeight > clientHeight) {
         target.tabIndex = '0';
-        target.setAttribute('role', 'region');
+        target.setAttribute('role', 'group');
         target.setAttribute('aria-label', 'Preformatted text that overflows visually');
       } else {
         ['tabindex', 'role', 'aria-label'].forEach(attr => target.removeAttribute(attr));
