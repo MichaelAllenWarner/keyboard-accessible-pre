@@ -15,7 +15,7 @@ if (window.ResizeObserver) {
       const { scrollWidth, scrollHeight, clientWidth, clientHeight } = target;
 
       if (scrollWidth > clientWidth || scrollHeight > clientHeight) {
-        target.tabIndex = '0';
+        target.tabIndex = 0;
         target.setAttribute('role', 'group');
         target.setAttribute('aria-label', 'Preformatted text that overflows visually');
       } else {
